@@ -38,6 +38,19 @@ Ext.application({
 
         // Initialize the main view
         Ext.Viewport.add(Ext.create('menuTest.view.Main'));
+        
+        $fh.ready(function() {
+			
+			// bind menu button
+			$fh.handlers({
+				type: 'menu'
+				}, function() {
+				alert('Menu Pressed');
+				//selfcare.app.getController('Main').onSettingsCommand();
+			});
+		
+		});
+			
     },
 
     onUpdated: function() {
